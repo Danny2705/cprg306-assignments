@@ -18,7 +18,7 @@ export default function NewItem() {
 
     setName("");
     setQuantity(1);
-    setCategory("");
+    setCategory("produce");
     alert(`Added item: ${name}, quantity: ${quantity}, category: ${category}`);
   };
   const handleNameChange = (event) => {
