@@ -7,18 +7,26 @@ export default function Home() {
         <h1 className='text-4xl font-bold'>
           CPRG 306: Web Development 2 - Assignments
         </h1>
-        <Link
-          href='/week-2'
-          className='text-lg mt-[1.25rem] hover:underline hover:text-green-400'
-        >
-          Week 2 Assignment
-        </Link>
-        <Link
-          href='/week-3'
-          className='text-lg mt-[1.25rem] hover:underline hover:text-green-400'
-        >
-          Week 3 Assignment
-        </Link>
+        <div className='mt-[1.25rem] flex flex-col'>
+          <Link
+            href='/week-2'
+            className='text-lg hover:underline hover:text-green-400'
+          >
+            Week 2 Assignment
+          </Link>
+          <Link
+            href='/week-3'
+            className='text-lg hover:underline hover:text-green-400'
+          >
+            Week 3 Assignment
+          </Link>
+          <Link
+            href='/week-4'
+            className='text-lg hover:underline hover:text-green-400'
+          >
+            Week 4 Assignment
+          </Link>
+        </div>
       </div>
     </main>
   );
