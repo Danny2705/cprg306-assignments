@@ -3,17 +3,17 @@
 import { useState } from "react";
 import Item from "./item";
 
-export default function ItemList({ props }) {
+export default function ItemList({ items }) {
   const [sortBy, setSortBy] = useState("name");
-  let sortedItem = [...props];
+  // let sortedItem = [...items];
 
   const sortedItems = (() => {
     if (sortBy === "name") {
-      return sortedItem.sort((a, b) => a.name.localeCompare(b.name));
+      return items.sort((a, b) => a.name.localeCompare(b.name));
     } else if (sortBy === "category") {
-      return sortedItem.sort((a, b) => a.category.localeCompare(b.category));
+      return items.sort((a, b) => a.category.localeCompare(b.category));
     }
-    return props;
+    return items;
   })();
 
   const handleClick = (sortType) => {

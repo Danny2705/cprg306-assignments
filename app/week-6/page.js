@@ -15,7 +15,7 @@ export default function Page() {
       <div className='max-w-md w-full'>
         <h1 className='text-3xl font-bold m-2 py-2'>Shopping List</h1>
         <NewItem onAddItem={handleAddItem} />
-        <ItemList props={items} />
+        <ItemList items={items} />
       </div>
     </main>
   );
