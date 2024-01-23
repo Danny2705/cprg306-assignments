@@ -30,8 +30,6 @@ export default function Page() {
         </div>
         <div className='flex-1 mx-4 max-w-sm my-2 w-full items-start'>
           <h1 className='text-xl font-bold'>Meal Ideas</h1>
-          {/* <h1 className='text-xl font-bold'>Meal Ideas</h1>
-          <div>Select an item to see meal ideas</div> */}
           {selectedItemName ? (
             <MealIdea ingredient={selectedItemName} />
           ) : (
