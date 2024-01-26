@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link.js";
 import { useUserAuth } from "./_utils/auth-context.js";
 
 export default function Page() {
@@ -11,12 +13,26 @@ export default function Page() {
   };
   return (
     <div>
-      <button onClick={handleLogin}>Sign in with GitHub</button>
-      <button onClick={handleLogout}>Sign out</button>
-      <button>Continue to your Shopping List</button>
-      <p>
-        Welcome, {user.displayName} ({user.email})
-      </p>
+      <h1 className='text-4xl font-bold mb-5'>Shopping List App</h1>
+      {!user ? (
+        <div>
+          <button onClick={handleLogin} className='text-lg'>
+            Sign in with GitHub
+          </button>
+        </div>
+      ) : (
+        <div className='flex flex-col text-lg'>
+          <p>
+            Signed in as {user?.displayName} ({user?.email}).
+          </p>
+          <p onClick={handleLogout} className='hover:underline cursor-pointer'>
+            Sign out
+          </p>
+          <Link href='/week-8/shopping-list' className='hover:underline'>
+            Continue to your Shopping List
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
