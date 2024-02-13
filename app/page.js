@@ -50,6 +50,12 @@ export default function Home() {
           >
             Week 8 Assignment
           </Link>
+          <Link
+            href='/week-10'
+            className='text-lg hover:underline hover:text-green-400'
+          >
+            Week 10 Assignment
+          </Link>
         </div>
       </div>
     </main>
